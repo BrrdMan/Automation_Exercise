@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-03T01:35:37 IST" name="Default suite" finished-at="2025-07-03T01:35:43 IST" duration-ms="5245">
+  <suite started-at="2025-07-03T02:56:23 IST" name="Default suite" finished-at="2025-07-03T02:56:31 IST" duration-ms="8432">
     <groups>
     </groups>
-    <test started-at="2025-07-03T01:35:37 IST" name="Default test" finished-at="2025-07-03T01:35:43 IST" duration-ms="5245">
-      <class name="testCases.AE_TC_007_Test">
-        <test-method is-config="true" signature="reportConfiguration()[pri:0, instance:testCases.AE_TC_007_Test@6aaceffd]" started-at="2025-07-03T01:35:37 IST" name="reportConfiguration" finished-at="2025-07-03T01:35:37 IST" duration-ms="326" status="PASS">
+    <test started-at="2025-07-03T02:56:23 IST" name="Default test" finished-at="2025-07-03T02:56:31 IST" duration-ms="8432">
+      <class name="products.AE_TC_008_Test">
+        <test-method is-config="true" signature="reportConfiguration()[pri:0, instance:products.AE_TC_008_Test@6aaceffd]" started-at="2025-07-03T02:56:22 IST" name="reportConfiguration" finished-at="2025-07-03T02:56:23 IST" duration-ms="321" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reportConfiguration -->
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testCases.AE_TC_007_Test@6aaceffd]" started-at="2025-07-03T01:35:37 IST" name="openBrowser" finished-at="2025-07-03T01:35:42 IST" duration-ms="4256" status="PASS">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:products.AE_TC_008_Test@6aaceffd]" started-at="2025-07-03T02:56:23 IST" name="openBrowser" finished-at="2025-07-03T02:56:27 IST" duration-ms="4209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="verifyTestCasesPage()[pri:0, instance:testCases.AE_TC_007_Test@6aaceffd]" started-at="2025-07-03T01:35:42 IST" name="verifyTestCasesPage" finished-at="2025-07-03T01:35:42 IST" duration-ms="636" status="PASS">
+        <test-method signature="verifyProducts()[pri:0, instance:products.AE_TC_008_Test@6aaceffd]" started-at="2025-07-03T02:56:27 IST" name="verifyProducts" finished-at="2025-07-03T02:56:31 IST" duration-ms="3891" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTestCasesPage -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.AE_TC_007_Test@6aaceffd]" started-at="2025-07-03T01:35:42 IST" name="closeBrowser" finished-at="2025-07-03T01:35:43 IST" duration-ms="307" status="PASS">
+        </test-method> <!-- verifyProducts -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:products.AE_TC_008_Test@6aaceffd]" started-at="2025-07-03T02:56:31 IST" name="closeBrowser" finished-at="2025-07-03T02:56:31 IST" duration-ms="290" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="reportBackup()[pri:0, instance:testCases.AE_TC_007_Test@6aaceffd]" started-at="2025-07-03T01:35:43 IST" name="reportBackup" finished-at="2025-07-03T01:35:43 IST" duration-ms="318" status="PASS">
+        <test-method is-config="true" signature="reportBackup()[pri:0, instance:products.AE_TC_008_Test@6aaceffd]" started-at="2025-07-03T02:56:31 IST" name="reportBackup" finished-at="2025-07-03T02:56:32 IST" duration-ms="602" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reportBackup -->
-      </class> <!-- testCases.AE_TC_007_Test -->
+      </class> <!-- products.AE_TC_008_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
