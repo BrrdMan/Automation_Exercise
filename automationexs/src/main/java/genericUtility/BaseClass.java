@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class BaseClass {
@@ -18,6 +19,7 @@ public class BaseClass {
 	public static WebDriver driver;
 	public static ExtentReports report;
 	public static WebDriverUtility wbUtil;
+	public static ExtentTest test;
 
 	public FileUtility fUtil = new FileUtility();
 	public JavaUtility jUtil = new JavaUtility();
