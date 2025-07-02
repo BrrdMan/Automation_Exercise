@@ -1,0 +1,52 @@
+package genericUtility;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+public class BaseClass {
+
+	public static WebDriver driver;
+	public static ExtentReports report;
+	public static WebDriverUtility wbUtil;
+
+	public FileUtility fUtil = new FileUtility();
+	public JavaUtility jUtil = new JavaUtility();
+
+	@BeforeSuite
+	public void reportConfiguration() {
+		ExtentSparkReporter spark = new ExtentSparkReporter("./HTML_report/[REPORT] " + jUtil.getTimestamp() + ".html");
+		report = new ExtentReports();
+		report.attachReporter(spark);
+	}
+
+	@BeforeClass
+	public void openBrowser() throws FileNotFoundException, IOException {
+		driver = new ChromeDriver();
+		wbUtil = new WebDriverUtility(driver);
+		wbUtil.maximize();
+		wbUtil.implicitWait(15);
+
+		driver.get(fUtil.getDataFromProperties("url"));
+
+	}
+
+	@AfterClass
+	public void closeBrowser() {
+		driver.quit();
+	}
+
+	@AfterSuite
+	public void reportBackup() {
+		report.flush();
+	}
+}
