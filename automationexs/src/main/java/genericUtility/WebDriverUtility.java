@@ -34,7 +34,7 @@ public class WebDriverUtility {
 	 * @param driver
 	 */
 	public void maximize() {
-		driver.manage().window().fullscreen();
+		driver.manage().window().maximize();
 	}
 
 	/**

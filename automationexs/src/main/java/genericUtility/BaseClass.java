@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
@@ -22,16 +23,17 @@ public class BaseClass {
 	public static ExtentTest test;
 
 	public FileUtility fUtil = new FileUtility();
+	public ExcelUtility eUtil = new ExcelUtility();
 	public JavaUtility jUtil = new JavaUtility();
 
-	@BeforeSuite
+	@BeforeSuite(alwaysRun = true)
 	public void reportConfiguration() {
 		ExtentSparkReporter spark = new ExtentSparkReporter("./HTML_report/[REPORT] " + jUtil.getTimestamp() + ".html");
 		report = new ExtentReports();
 		report.attachReporter(spark);
 	}
 
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void openBrowser() throws FileNotFoundException, IOException {
 		driver = new ChromeDriver();
 		wbUtil = new WebDriverUtility(driver);
@@ -40,14 +42,16 @@ public class BaseClass {
 
 		driver.get(fUtil.getDataFromProperties("url"));
 
+		Assert.assertEquals(driver.getTitle(), "Automation Exercise", "Home page is not diplayed as expected");
+
 	}
 
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void closeBrowser() {
 		driver.quit();
 	}
 
-	@AfterSuite
+	@AfterSuite(alwaysRun = true)
 	public void reportBackup() {
 		report.flush();
 	}
