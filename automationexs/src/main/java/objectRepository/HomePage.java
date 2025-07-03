@@ -22,6 +22,15 @@ public class HomePage {
 	@FindBy(partialLinkText = "Contact us")
 	private WebElement contactUsLink;
 
+	@FindBy(id = "susbscribe_email")
+	private WebElement emailSubscriptionField;
+
+	@FindBy(xpath = "//h2[contains(text(),'Subscription')]")
+	private WebElement footerHeading;
+
+	@FindBy(xpath = "//div[text()='You have been successfully subscribed!']")
+	private WebElement subscriptionSuccessMsg;
+
 	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -44,6 +53,18 @@ public class HomePage {
 
 	public WebElement getContactUsLink() {
 		return contactUsLink;
+	}
+
+	public WebElement getEmailSubscriptionField() {
+		return emailSubscriptionField;
+	}
+
+	public WebElement getFooterHeading() {
+		return footerHeading;
+	}
+
+	public WebElement getSubscriptionSuccessMsg() {
+		return subscriptionSuccessMsg;
 	}
 
 }

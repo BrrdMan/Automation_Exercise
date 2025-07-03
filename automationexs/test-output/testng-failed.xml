@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="products.AE_TC_008_Test">
+      <class name="home.AE_TC_010_Test">
         <methods>
           <include name="reportBackup"/>
           <include name="openBrowser"/>
-          <include name="verifyProducts"/>
           <include name="reportConfiguration"/>
           <include name="closeBrowser"/>
+          <include name="emailSubscription"/>
         </methods>
-      </class> <!-- products.AE_TC_008_Test -->
+      </class> <!-- home.AE_TC_010_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -21,6 +21,12 @@ public class ProductPage {
 	@FindBy(xpath = "//a[text()='View Product']")
 	private List<WebElement> viewProductLink;
 
+	@FindBy(xpath = "//h2[text()='Searched Products']")
+	private WebElement searchedProductheading;
+
+	@FindBy(xpath = "//a[text()='View Product']/../../../..//div[contains(@class,'productinfo')]/p")
+	private List<WebElement> productNames;
+
 	public ProductPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -39,6 +45,14 @@ public class ProductPage {
 
 	public List<WebElement> getViewProductLink() {
 		return viewProductLink;
+	}
+
+	public WebElement getSearchedProductheading() {
+		return searchedProductheading;
+	}
+
+	public List<WebElement> getProductNames() {
+		return productNames;
 	}
 
 }
