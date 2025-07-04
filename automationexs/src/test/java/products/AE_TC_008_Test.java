@@ -40,7 +40,7 @@ public class AE_TC_008_Test extends BaseClass {
 
 		viewProduct.get(0).click();
 
-		Assert.assertEquals(driver.getTitle(), "Automation Exercise - Product Details",
+		Assert.assertEquals(driver.getTitle(), "Automation Exercise - Details",
 				"Product detail page is not displayed as expected");
 
 		ProductDetailPage pdp = new ProductDetailPage(driver);
